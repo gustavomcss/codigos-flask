@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ docTitle }}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../static/padrao.css">
+<body onresize="mudouTamanho()">
+    <header>
+        <a href="home.html"><img src="../static/images/logo.png" alt="Logo Psico"></a>
+        <h1>
+            <a href="home.html">Liga Acadêmica de Psicologia Hospitalar e Saúde Coletiva</a>
+        </h1>
+        <i class="material-icons" id="burguer" onclick="clickMenu()">menu</i>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <menu id="itens">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>   
+        </ul>
+    </menu>
+
+    <div class="container">
+        {% block conteudo %}
+
+        {% endblock %}
+    </div>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 600) {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
