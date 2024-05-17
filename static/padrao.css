@@ -82,7 +82,7 @@ header > button {
 
 main {
     background-color: var(--color05);
-    margin: 15px auto 0px auto;
+    margin: 15px auto;
     padding: 25px;
     max-width: 1200px;
 }
@@ -110,6 +110,22 @@ main > p > a:hover {
     text-decoration: underline;
 }
 
+main > div.membros {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+}
+
+main > div.membros > div.card > div.card-body {
+    padding: 12px;
+}
+
+main > div.membros > div.card > div.card-body > h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 /* MEDIA-QUERY PARA NAVEGADOR E MENU */
 
 @media screen and (min-width: 600px) {
@@ -129,5 +145,13 @@ main > p > a:hover {
 
     header > button {
         display: flex;
+    }
+
+    main > div.membros {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 1em;
     }
 }
