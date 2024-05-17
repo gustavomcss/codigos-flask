@@ -28,67 +28,54 @@ html {
 /* CABEÇALHO */
 
 header {
-    background-color: var(--color05);
+    background-color: #F4F4F4;
     display: flex;
-    gap: 1em;
-    align-items: center;
     padding: 15px;
 }
 
-header > a > img {
+header > a {
     display: flex;
-    height: 60px;
-    width: 60px;
-}
-
-header > h1 {
-    display: flex;
+    gap: 1em;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
     margin-right: auto;
 }
 
-header > h1 > a {
-    color: var(--color-fonte);
-    display: inline-block;
-    font-size: 0.55em;
+header > a > img {
+    width: 60px;
+    height: 60px;
+}
+
+header > a > h1 {
+    color: #405359;
+    font-size: 1.1em;
+}
+
+header > menu {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+header > menu > a {
+    color: #405359;
     text-decoration: none;
-    text-align: center;
-}
-
-header > nav {
-    display: none;
-}
-
-header > i#burguer {
-    color: var(--color-fonte);
-    text-align: center;
-    padding: 12px;
-    cursor: pointer;
-}
-
-menu {
-    background-color: var(--color05);
-    text-align: center;
-    display: none;
-}
-
-menu > ul {
-    list-style-type: none;
-}
-
-menu > ul > li:hover {
-    background-color: rgba(57, 131, 151, 0.425);
-    color: var(--color01);
-    transition: 0.5s;
-}
-
-menu > ul > li > a {
-    color: var(--color-fonte);
-    display: block;
     font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    padding: 11px;
-    border-top: 1px solid rgba(0, 0, 0, 0.250);
+    font-size: 1em;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+header > button {
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+header > button > span.burguer {
+    color: #405359;
 }
 
 /* MAIN */
@@ -129,27 +116,21 @@ main > div > p > a:hover {
 /* MEDIA-QUERY PARA NAVEGADOR E MENU */
 
 @media screen and (min-width: 600px) {
-    i#burguer {
+    header > menu {
+        display: flex;
+    }
+
+    header > button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header > menu {
         display: none;
     }
 
-    header > nav {
-        display: inline-block;
-        text-align: center;
-        padding: 5px;
-    }
-
-    header > nav > a {
-        color: var(--color-fonte);
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1em;
-        padding: 3px 4px;
-        border-radius: 6px;
-    }
-
-    header > nav > a:hover {
-        background-color: #3983975b;
-        transition: 0.75s;
+    header > button {
+        display: flex;
     }
 }
