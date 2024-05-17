@@ -6,6 +6,7 @@
     <title>{{ docTitle }}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../static/padrao.css">
+</head>
 <body onresize="mudouTamanho()">
     <header>
         <a href="home.html"><img src="../static/images/logo.png" alt="Logo Psico"></a>
@@ -28,11 +29,11 @@
         </ul>
     </menu>
 
-    <div class="container">
+    <main>
         {% block conteudo %}
 
         {% endblock %}
-    </div>
+    </main>
 
     <script>
         function clickMenu() {
