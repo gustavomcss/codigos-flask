@@ -20,7 +20,7 @@
     padding: 0px;
 }
 
-html {
+body {
     font-family: var(--fonte-padrao);
     background-color: var(--color01);
 }
@@ -76,6 +76,38 @@ header > button {
     padding: 1em;
     cursor: pointer;
     background-color: transparent;
+}
+
+/* MAIN */
+
+main {
+    background-color: var(--color05);
+    margin: 15px auto 0px auto;
+    padding: 25px;
+    max-width: 1200px;
+}
+
+main > h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main > p {
+    margin-bottom: 10px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
+
+main > p > a {
+    color: #000000;
+    text-decoration: none;
+}
+
+main > p > a:hover {
+    text-decoration: underline;
 }
 
 /* MEDIA-QUERY PARA NAVEGADOR E MENU */
