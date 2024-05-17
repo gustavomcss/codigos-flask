@@ -8,50 +8,51 @@
     <link rel="stylesheet" href="../static/bootstrap.css">
     <link rel="stylesheet" href="../static/padrao.css">
 </head>
-<body onresize="mudouTamanho()">
-    <header>
-        <a href="home.html"><img src="../static/images/logo.png" alt="Logo Psico"></a>
-        <h1>
-            <a href="home.html"><strong>Liga Acadêmica de Psicologia Hospitalar e Saúde Coletiva</strong></a>
-        </h1>
-        <i class="material-icons" id="burguer" onclick="clickMenu()">menu</i>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
-
-    <menu id="itens">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>   
-        </ul>
-    </menu>
-
-    <div class="container mt-5">
-        <div class="card">
-            {% block conteudo %}
-
-            {% endblock %}
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../static/images/logo.png" alt="Logo" width="60" height="50" class="d-inline-block">
+            </a>
+            <a class="navbar-brand" href="">Liga Academica de Psicologia Hospitalar e Saude Coletiva</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
         </div>
-    </div>
+    </nav>
+    
 
-    <script>
-        function clickMenu() {
-            if (itens.style.display == 'block') {
-                itens.style.display = 'none'
-            } else {
-                itens.style.display = 'block'
-            }
-        }
+    {% block conteudo %}
 
-        function mudouTamanho() {
-            if (window.innerWidth >= 600) {
-                itens.style.display = 'none'
-            }
-        }
-    </script>
+    {% endblock %}
 </body>
 </html>
