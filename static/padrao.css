@@ -21,10 +21,12 @@
 }
 
 html {
-    font-family: var(--fonte-padrao);
     background-color: var(--color01);
 }
 
+body {
+    font-family: var(--fonte-padrao);
+}
 /* CABEÇALHO */
 
 header {

@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ docTitle }}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../static/bootstrap.css">
     <link rel="stylesheet" href="../static/padrao.css">
+</head>
 <body onresize="mudouTamanho()">
     <header>
         <a href="home.html"><img src="../static/images/logo.png" alt="Logo Psico"></a>
         <h1>
-            <a href="home.html">Liga Acadêmica de Psicologia Hospitalar e Saúde Coletiva</a>
+            <a href="home.html"><strong>Liga Acadêmica de Psicologia Hospitalar e Saúde Coletiva</strong></a>
         </h1>
         <i class="material-icons" id="burguer" onclick="clickMenu()">menu</i>
         <nav>
@@ -28,10 +30,12 @@
         </ul>
     </menu>
 
-    <div class="container">
-        {% block conteudo %}
+    <div class="container mt-5">
+        <div class="card">
+            {% block conteudo %}
 
-        {% endblock %}
+            {% endblock %}
+        </div>
     </div>
 
     <script>

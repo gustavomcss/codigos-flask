@@ -8,4 +8,4 @@ def home():
     return render_template('home.html',
                            docTitle = 'Liga PHSC - Home')
 
-app.run()
+app.run(debug=True)
