@@ -28,18 +28,19 @@ html {
 /* CABEÇALHO */
 
 header {
-    background-color: #F4F4F4;
     display: flex;
+    background-color: var(--color05);
+    font-family: 'Sen';
     padding: 15px;
+    gap: 1em;
 }
 
 header > a {
     display: flex;
-    gap: 1em;
-    align-items: center;
-    text-align: center;
     text-decoration: none;
+    align-items: center;
     margin-right: auto;
+    gap: 1em;
 }
 
 header > a > img {
@@ -48,7 +49,10 @@ header > a > img {
 }
 
 header > a > h1 {
-    color: #405359;
+    color: var(--color-fonte);
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
     font-size: 1.1em;
 }
 
@@ -59,58 +63,19 @@ header > menu {
 }
 
 header > menu > a {
-    color: #405359;
+    color: var(--color-fonte);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1em;
     padding: 6px;
     border-radius: 5px;
 }
 
 header > button {
+    color: var(--color-fonte);
     border: none;
     padding: 1em;
     cursor: pointer;
     background-color: transparent;
-}
-
-header > button > span.burguer {
-    color: #405359;
-}
-
-/* MAIN */
-
-main {
-    margin-bottom: 15px;
-}
-
-main > div {
-    background-color: var(--color05);
-    padding: 25px;
-    margin: 15px auto 0px auto;
-    max-width: 1150px;
-}
-
-main > div > h2 {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-main > div > p {
-    text-align: justify;
-    margin-bottom: 10px;
-    line-height: 1.5em;
-    text-indent: 30px;
-}
-
-main > div > p > a {
-    text-decoration: none;
-    color: #000000;
-}
-
-main > div > p > a:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 /* MEDIA-QUERY PARA NAVEGADOR E MENU */
