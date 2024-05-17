@@ -95,30 +95,34 @@ menu > ul > li > a {
 /* MAIN */
 
 main {
+    margin-bottom: 15px;
+}
+
+main > div {
     background-color: var(--color05);
     padding: 25px;
     margin: 15px auto 0px auto;
     max-width: 1150px;
 }
 
-main > h2 {
+main > div > h2 {
     margin-top: 15px;
     margin-bottom: 20px;
 }
 
-main > p {
+main > div > p {
     text-align: justify;
     margin-bottom: 10px;
     line-height: 1.5em;
     text-indent: 30px;
 }
 
-main > p > a {
+main > div > p > a {
     text-decoration: none;
     color: #000000;
 }
 
-main > p > a:hover {
+main > div > p > a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
