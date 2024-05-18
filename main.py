@@ -4,6 +4,7 @@ from flask import url_for
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
     return render_template('padrao.html',
@@ -18,6 +19,11 @@ def sobre():
 def contato():
     return render_template('contato.html',
                            docTitle = 'Liga PHSC - Contato')
+
+@app.route('/teste')
+def teste():
+    return render_template('teste_bootstrap.html',
+                           docTitle = 'Liga PHSC - Testes')
 
 if __name__ == '__main__':
     app.run(debug = True)
