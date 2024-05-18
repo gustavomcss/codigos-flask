@@ -131,9 +131,44 @@ main > div.membros > div.card > div.card-body > h3 {
     font-size: 1.2em;
 }
 
+main > div.carousel {
+    margin-bottom: 30px;
+}
+
+main > div.carousel > div.carousel-indicators {
+    margin-bottom: -2em;
+}
+
+main > div.carousel > div.carousel-inner > div.carousel-item > div.card {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+main > div.carousel > div.carousel-inner > div.carousel-item > div.card > img {
+    height: 17.9em;
+}
+
+main > div.carousel > div.carousel-inner > div.carousel-item > div.card > div.card-body {
+    padding: 12px;
+}
+
+main > div.carousel > div.carousel-inner > div.carousel-item > div.card > div.card-body > h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+main > div.carousel > button.carousel-control-prev {
+    margin-left: -1.5em;
+}
+
+main > div.carousel > button.carousel-control-next {
+    margin-right: -1.5em;
+}
+
 /* MEDIA-QUERY PARA NAVEGADOR E MENU */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     header > menu {
         display: flex;
     }
@@ -141,14 +176,30 @@ main > div.membros > div.card > div.card-body > h3 {
     header > button {
         display: none;
     }
+
+    main > div.membros {
+        display: flex;
+    }
+
+    main > div.carousel {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     header > menu {
         display: none;
     }
 
     header > button {
+        display: flex;
+    }
+
+    main > div.membros {
+        display: none;
+    }
+
+    main > div.carousel {
         display: flex;
     }
 }
