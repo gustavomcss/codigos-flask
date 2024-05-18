@@ -19,4 +19,5 @@ def contato():
     return render_template('contato.html',
                            docTitle = 'Liga PHSC - Contato')
 
-app.run(debug = True)
+if __name__ == '__main__':
+    app.run(debug = True)
