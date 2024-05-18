@@ -1,8 +1,10 @@
 from flask import Flask
 from flask import render_template
 from flask import url_for
+import os
 
 app = Flask(__name__)
+port = int(os.getenv('PORT'), '5000')
 
 @app.route('/')
 def home():
@@ -19,4 +21,4 @@ def contato():
     return render_template('contato.html',
                            docTitle = 'Liga PHSC - Contato')
 
-app.run(debug = True)
+app.run(host = '0.0.0.0', port = port)
