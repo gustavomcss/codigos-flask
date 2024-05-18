@@ -112,9 +112,14 @@ main > p > a:hover {
 
 main > div.membros {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     gap: 1em;
+}
+
+main > div.membros > div.card > img {
+    height: 17.9em;
 }
 
 main > div.membros > div.card > div.card-body {
@@ -145,13 +150,5 @@ main > div.membros > div.card > div.card-body > h3 {
 
     header > button {
         display: flex;
-    }
-
-    main > div.membros {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        gap: 1em;
     }
 }
