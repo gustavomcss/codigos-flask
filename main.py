@@ -26,3 +26,14 @@ def teste():
 
 if __name__ == '__main__':
     app.run()
+
+''' --- PARA HOSPEDAR NO HEROKU ---
+
+1. pip install gunicorn
+
+2. pip freeze > requirements.txt
+
+3. CREATE Procfile WRITE INTO:
+    web: gunicorn (nome_arquivo):(var_flask)
+
+'''
