@@ -25,7 +25,7 @@ def teste():
                            docTitle = 'Liga PHSC - Testes')
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0')
+    app.run(host = '0.0.0.0', debug = True)
 
 ''' --- PARA HOSPEDAR NO HEROKU ---
 
