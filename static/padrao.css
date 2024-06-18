@@ -78,6 +78,10 @@ header > button {
     background-color: transparent;
 }
 
+header > button > span {
+    align-self: center;
+}
+
 /* MAIN */
 
 main {

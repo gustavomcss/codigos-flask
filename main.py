@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
 def home():
-    return render_template('padrao.html',
+    return render_template('home.html',
                            docTitle = 'Liga PHSC')
 
 @app.route('/sobre', methods = ['GET'])
